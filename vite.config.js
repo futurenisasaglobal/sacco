@@ -4,11 +4,15 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+
+  base: '/sacco/',
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
+
   server: {
     port: 3000,
     proxy: {
@@ -19,12 +23,10 @@ export default defineConfig({
       },
     },
   },
+
   build: {
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
-  },
-  env: {
-    VITE_API_URL: 'http://localhost:8000/api',
   },
 });
