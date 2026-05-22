@@ -1,0 +1,293 @@
+/* Import in your index.html or global CSS:
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"> */
+
+.footer {
+  background: #034e21;
+  color: #c8d0e0;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+/* Ambient gold glow top-right */
+.footer::after {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 168, 67, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Gold gradient rule at very top */
+.topRule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4a843 30%,
+    #f0c96e 50%,
+    #d4a843 70%,
+    transparent
+  );
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* ── Grid ── */
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  padding: 4rem 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Brand column ── */
+.brandName {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.4rem;
+}
+
+.brandTag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4a843;
+  margin: 0 0 1.2rem;
+}
+
+.brandDesc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #b1b6c0;
+  margin: 0 0 2rem;
+  max-width: 280px;
+}
+
+.badges {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: #d4a843;
+  border: 0.5px solid rgba(212, 168, 67, 0.35);
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #d4a843;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Column titles ── */
+.colTitle {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4a843;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.5px solid rgba(212, 168, 67, 0.2);
+}
+
+/* ── Nav/product lists ── */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.links li a,
+.links li span {
+  font-size: 0.875rem;
+  color: #b9c2cf;
+  text-decoration: none;
+  display: block;
+  line-height: 1.4;
+  transition: color 0.25s ease;
+}
+
+.links li a:hover {
+  color: #e4d857;
+}
+
+/* ── Contact items ── */
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0.85rem;
+}
+
+.contactIcon {
+  font-size: 14px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.contactText {
+  font-size: 0.875rem;
+  color: #bac5d7;
+  line-height: 1.4;
+}
+
+.contactText strong {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d6cd50;
+  margin-bottom: 2px;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 0.5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.594) 20%,
+    rgba(255, 255, 255, 0.473) 80%,
+    transparent
+  );
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Bottom bar ── */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copy {
+  font-size: 0.78rem;
+  color: #cedaf1;
+  margin: 0;
+}
+
+.copyAccent {
+  color: #d4a843;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.bottomLinks a {
+  font-size: 0.78rem;
+  color: #b9c5da;
+  text-decoration: none;
+  padding: 4px 12px;
+  transition: color 0.2s ease;
+}
+
+.bottomLinks a:hover {
+  color: #d4a843;
+}
+
+.sep {
+  display: inline-block;
+  width: 0.5px;
+  height: 12px;
+  background: #2a3244;
+}
+
+/* ── SASRA regulatory line ── */
+.sasra {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: #808896;
+  padding-bottom: 1.2rem;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.sasraDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #cdbb36;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+
+  .brandDesc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2.5rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sasra {
+    justify-content: flex-start;
+  }
+}

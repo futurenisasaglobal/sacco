@@ -1,0 +1,348 @@
+/* src/components/Header.module.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ================= TOP BAR ================= */
+
+.topBar {
+  background: #14532d;
+  color: white;
+  border-bottom: 3px solid #eab308;
+}
+
+.topContainer {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.topLink {
+  text-decoration: none;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.topLink:hover {
+  color: #facc15;
+}
+
+.topLink::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #facc15;
+  transition: 0.25s ease;
+}
+
+.topLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.memberPortalBtn {
+  text-decoration: none;
+  background: white;
+  color: #14532d;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  transition: 0.25s ease;
+}
+
+.memberPortalBtn:hover {
+  background: #facc15;
+}
+
+.topSocials {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.socialIcon {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.socialIcon:hover {
+  color: #facc15;
+  transform: translateY(-2px);
+}
+
+/* ================= MAIN HEADER ================= */
+
+.mainHeader {
+  background: white;
+}
+
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 52px;
+  height: 52px;
+  background: #16a34a;
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.logoBrand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.brandSub {
+  font-size: 0.72rem;
+  color: #16a34a;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+/* ================= NAV ================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+.navLink:hover {
+  color: #16a34a;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background: #16a34a;
+  transition: 0.25s ease;
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.active {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* ================= SEARCH ================= */
+
+.searchBox {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  padding: 0.75rem 1rem;
+  outline: none;
+  width: 180px;
+  font-size: 0.9rem;
+}
+
+.searchBtn {
+  border: none;
+  background: transparent;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #16a34a;
+  font-size: 1rem;
+}
+
+/* ================= ACTIONS ================= */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btnLogin {
+  text-decoration: none;
+  border: 1.5px solid #16a34a;
+  color: #16a34a;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.btnLogin:hover {
+  background: #16a34a;
+  color: white;
+}
+
+.btnSignup {
+  text-decoration: none;
+  background: #16a34a;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.btnSignup:hover {
+  background: #15803d;
+}
+
+/* ================= MOBILE ================= */
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  margin: 5px 0;
+  display: block;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .menuToggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: none;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .searchBox {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .topNav {
+    display: none;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .topContainer {
+    padding: 0.8rem 1rem;
+  }
+
+  .topSocials {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logoIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brandName {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,420 @@
+.dashboard {
+  padding: 2rem;
+  background: #f5f7f4;
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    #1d4d2b,
+    #2f6b3b
+  );
+
+  border-radius: 28px;
+
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  color: white;
+
+  margin-bottom: 2rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: rgba(255,255,255,0.05);
+
+  border-radius: 50%;
+
+  top: -200px;
+  right: -120px;
+}
+
+.welcome {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.8;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.hero p {
+  max-width: 600px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.memberMeta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fde68a;
+  font-weight: 600;
+}
+
+/* BUTTONS */
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  border: none;
+  border-radius: 14px;
+  padding: 0.95rem 1.4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.primaryBtn {
+  background: #facc15;
+  color: #422006;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* STATS */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  border: 1px solid #e7ece5;
+
+  transition: 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.statCard span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.statCard h3 {
+  font-size: 1.7rem;
+  color: #0f172a;
+  margin: 0.4rem 0;
+}
+
+.statIconGreen,
+.statIconYellow,
+.statIconRed,
+.statIconBlue {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statIconGreen {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.statIconYellow {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.statIconRed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.statIconBlue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.positive,
+.negative,
+.neutral {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.neutral {
+  color: #64748b;
+}
+
+/* GRID */
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* CARD */
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.8rem;
+  border: 1px solid #e7ece5;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.cardHeader span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.activeBadge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* LOAN */
+
+.loanAmounts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.loanAmounts small {
+  color: #64748b;
+}
+
+.loanAmounts h2 {
+  margin-top: 0.4rem;
+}
+
+.red {
+  color: #dc2626;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  color: #64748b;
+}
+
+.progressBar {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #4ade80
+  );
+}
+
+.loanGrid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.loanGrid small {
+  display: block;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+.loanGrid strong {
+  color: #0f172a;
+}
+
+/* CHART */
+
+.chartPlaceholder {
+  height: 320px;
+
+  border-radius: 20px;
+
+  background: #f8fafc;
+
+  border: 2px dashed #dbe4dd;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+
+  gap: 1rem;
+}
+
+/* TABLE */
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+.transactionTitle {
+  font-weight: 600;
+}
+
+code {
+  background: #f1f5f9;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+}
+
+.amountPositive {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.amountNegative {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .loanGrid {
+    grid-template-columns: 1fr;
+  }
+}

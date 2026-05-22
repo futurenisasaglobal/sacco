@@ -1,0 +1,551 @@
+/* src/pages/auth/LoginPage.module.css */
+
+/* ── DESIGN TOKENS ──────────────────────────────────── */
+:root {
+  --g:       #2f6b3b;
+  --gd:      #16311d;
+  --gl:      #eef3ea;
+  --gm:      #c8dfc9;
+  --gsoft:   #6eaf7c;
+  --y:       #c9a227;
+  --yl:      #fef3c7;
+  --mu:      #667085;
+  --bd:      #e7ece5;
+  --wh:      #ffffff;
+  --bg:      #f5f7f4;
+  --text:    #16311d;
+  --red:     #dc2626;
+  --redbg:   #fef2f2;
+  --redbdr:  #fecaca;
+}
+
+/* ── SCREEN LAYOUT ──────────────────────────────────── */
+.screen {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  min-height: 100vh;
+  font-family: 'DM Sans', 'Outfit', system-ui, sans-serif;
+}
+
+/* ── LEFT PANEL ─────────────────────────────────────── */
+.left {
+  background: var(--gd);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2.5rem 2.25rem;
+  gap: 1.75rem;
+}
+
+
+
+/* Brand */
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.brandMark img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brandName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* Hero copy */
+.heroCopy {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gsoft);
+  margin-bottom: 0.6rem;
+}
+
+.heroH {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.heroH em {
+  color: var(--y);
+  font-style: normal;
+}
+
+.heroP {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  max-width: 260px;
+}
+
+/* Stat pills */
+.statPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.statPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+.statPill svg {
+  color: var(--y);
+  flex-shrink: 0;
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.featRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.featIco {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--y);
+}
+.featText strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.featText span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Testimonial */
+.testimonial {
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+.testiQ {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.testiAuthor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.testiAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--y);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #422006;
+  flex-shrink: 0;
+}
+.testiName {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+}
+.testiRole {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ── RIGHT PANEL ────────────────────────────────────── */
+.right {
+  background: var(--wh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+}
+
+.formWrap {
+  width: 100%;
+  max-width: 390px;
+}
+
+/* Mobile brand (only shown on small screens) */
+.mobileBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobileBrandMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.mobileBrandMark img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+
+.mobileBrandName {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--gd);
+}
+
+/* Form header */
+.formTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--gd);
+  margin-bottom: 0.3rem;
+}
+.formSub {
+  font-size: 13px;
+  color: var(--mu);
+  margin-bottom: 1.5rem;
+}
+.formSub a {
+  color: var(--g);
+  font-weight: 600;
+  text-decoration: none;
+}
+.formSub a:hover {
+  text-decoration: underline;
+}
+
+/* Error banner */
+.errBox {
+  background: var(--redbg);
+  border: 1px solid var(--redbdr);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.1rem;
+  color: var(--red);
+}
+.errText {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--red);
+}
+
+/* Hint box */
+.hintBox {
+  background: #fefce8;
+  border: 1px solid #fef08a;
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  gap: 9px;
+  margin-bottom: 1.25rem;
+}
+.hintIcon {
+  color: #854d0e;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.hintText {
+  font-size: 12px;
+  color: #713f12;
+  line-height: 1.65;
+}
+
+/* Form field */
+.fg {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+.fl {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--mu);
+}
+.fiWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.fiIcon {
+  position: absolute;
+  left: 12px;
+  color: #9eadb4;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+.fi {
+  width: 100%;
+  padding: 11px 12px 11px 38px;
+  font-size: 13.5px;
+  font-family: inherit;
+  border: 1.5px solid var(--bd);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--gd);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.fi:focus {
+  border-color: var(--g);
+  background: var(--wh);
+  box-shadow: 0 0 0 3px rgba(47, 107, 59, 0.1);
+}
+.fi::placeholder {
+  color: #b0bfba;
+}
+.fiHasRight {
+  padding-right: 42px;
+}
+
+/* Eye toggle */
+.eyeBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9eadb4;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.15s;
+}
+.eyeBtn:hover {
+  color: var(--gd);
+}
+
+/* Remember + forgot row */
+.formRowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--mu);
+  cursor: pointer;
+  user-select: none;
+}
+.remember input[type='checkbox'] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--g);
+  cursor: pointer;
+}
+.forgot {
+  font-size: 12.5px;
+  color: var(--g);
+  font-weight: 600;
+  text-decoration: none;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.btnSubmit {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: var(--g);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+.btnSubmit:hover:not(:disabled) {
+  background: #24552e;
+  transform: translateY(-1px);
+}
+.btnSubmit:active:not(:disabled) {
+  transform: scale(0.99);
+}
+.btnSubmit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.spin {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.1rem;
+  font-size: 12px;
+  color: #aab5b8;
+  font-weight: 500;
+}
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--bd);
+}
+
+/* OAuth row */
+.oauthRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.btnOauth {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1.5px solid var(--bd);
+  border-radius: 12px;
+  background: var(--wh);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--gd);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btnOauth:hover {
+  border-color: var(--gm);
+  background: var(--gl);
+}
+.oauthBadge {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--yl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  color: #854d0e;
+  flex-shrink: 0;
+}
+
+/* Footnote */
+.footnote {
+  font-size: 11.5px;
+  color: #aab5b8;
+  text-align: center;
+  line-height: 1.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.footnote svg {
+  color: var(--gsoft);
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 840px) {
+  .screen {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    display: none;
+  }
+  .mobileBrand {
+    display: flex;
+  }
+  .right {
+    align-items: flex-start;
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .right {
+    padding: 1.5rem 1.25rem;
+  }
+  .formTitle {
+    font-size: 1.35rem;
+  }
+}
